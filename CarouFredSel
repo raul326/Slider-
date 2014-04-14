@@ -1,0 +1,66 @@
+//How to use
+<div class="main-wrapper">
+	<div id="inner-wrapper">
+    <div class="item-wrapper">Content here...</div>
+	</div>
+	<a id="btn_prev" href="#">Prev</a>
+	<a id="btn_next" href="#">Next</a>
+</div>
+
+  //CSS
+  .main-wrapper {
+    width: 960px;
+    position: relative;
+  }
+  .item-wrapper {
+    margin: 0 10px;
+    width: 202px; //Sample Width
+  }
+  .caroufredsel_wrapper {
+    width: margin 0px auto;
+  }
+  #btn_prev {
+    background: url("../images/leadin-arrow-left.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    height: 34px;
+    left: 0;
+    position: absolute;
+    text-indent: -9999px;
+    text-transform: capitalize;
+    top: 50%;
+    width: 17px;
+  }
+  #btn_next {
+      background: url("../images/leadin-arrow-right.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+      height: 34px;
+      position: absolute;
+      right: 0;
+      text-indent: -9999px;
+      text-transform: capitalize;
+      top: 50%;
+      width: 17px;
+  }
+						
+
+//add this code on your script
+$('#inner-wrapper').carouFredSel({
+    width: 960,
+    circular: true,
+    infinite: true,
+    auto: false,
+    items:5,
+    prev  : { 
+      button: "#btn_prev",
+      key: "left"
+    },
+    next: { 
+      button: "#btn_next",
+      key: "right"
+    },
+    scroll: {
+    	items: 1
+    }
+});
+
+
+//Download jquery carouFredSel
+https://www.dropbox.com/s/zjut203fdbnl2cy/jquery.carouFredSel-6.2.0-packed.js
